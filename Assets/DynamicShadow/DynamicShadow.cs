@@ -135,10 +135,10 @@ public class DynamicShadow : MonoBehaviour
         if (m_DepthShader && m_DepthCamera)
         {
             // GL.GetGPUProjectionMatrix(m_DepthCamera.projectionMatrix, false) ?
-            Matrix4x4 matrix4x = m_DepthCamera.projectionMatrix * m_DepthCamera.worldToCameraMatrix;
-            Vector4 vector = transform.forward.normalized;
+            var matrix4x = m_DepthCamera.projectionMatrix * m_DepthCamera.worldToCameraMatrix;
+
             Shader.SetGlobalMatrix(kDynamicShadowMatrixTag, matrix4x); // light direction
-            Shader.SetGlobalVector(kDynamicShadowParamTag, vector);
+            Shader.SetGlobalVector(kDynamicShadowParamTag, transform.forward.normalized);
         }
     }
     #endregion
