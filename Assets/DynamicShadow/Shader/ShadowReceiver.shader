@@ -16,8 +16,8 @@
 			#pragma vertex vert
 			#pragma fragment frag
 			#include "UnityCG.cginc"
-			#pragma multi_compile DYNAMIC_SHADOW_USE_ARGB_DEPTH_TEXTURE
-			#pragma multi_compile DYNAMIC_SHADOW_USE_SOFT
+			#pragma multi_compile __ DYNAMIC_SHADOW_USE_ARGB_DEPTH_TEXTURE
+			#pragma multi_compile __ DYNAMIC_SHADOW_USE_SOFT
 
 			struct appdata
 			{
